@@ -1,17 +1,15 @@
 #include <stdio.h>
 
-int inc(int counter);
+int counter;
 
+void set_counter()
+{
+    counter = 20;
+}
 int main(void)
 {
-    int i = 10;
-    printf("before call function i=%d\n", i);
-    i = inc(i);
-    printf("after call function i=%d\n", i);
+    printf("counter=%d\n", counter);
+    set_counter();
+    printf("counter=%d\n", counter);
     return 0;
-}
-int inc(int counter)
-{
-    counter++;
-    return counter;
 }
